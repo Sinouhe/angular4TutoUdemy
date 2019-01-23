@@ -1,0 +1,27 @@
+<div *ngIf="!isAuthenticated">
+    <h1>créer un compte</h1>
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+      <input type="text"
+              class="login-input"
+              ngModel
+              name="email"
+              placeholder="email"
+              required
+      >
+      <input type="password"
+              class="login-input"
+              ngModel
+              name="password"
+              placeholder="mot de passe"
+      >
+
+      <input type="password"
+              class="login-input"
+              ngModel
+              name="confirm_password"
+              placeholder="confirm mot de passe"
+      >
+      
+      <button type="submit" class="btn btn-success" [disabled]=registerForm.invalid>log</button>
+    </form>
+  </div>

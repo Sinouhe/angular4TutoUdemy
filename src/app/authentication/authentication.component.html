@@ -1,0 +1,25 @@
+<div *ngIf="!isAuthenticated">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+    <input type="text"
+            class="login-input"
+            ngModel
+            name="email"
+            placeholder="email"
+            required
+    >
+    <input type="password"
+            class="login-input"
+            ngModel
+            name="password"
+            placeholder="mot de passe"
+    >
+    
+    <button type="submit" class="btn btn-success" [disabled]=loginForm.invalid>log</button>
+  </form>
+</div>
+
+<div nfIf=isAuthenticated>
+  <div>{{welcomeMessage}}</div>
+  <div>{{jbbData}}</div>
+
+</div>

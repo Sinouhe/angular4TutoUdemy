@@ -1,0 +1,18 @@
+<div>
+  <form #searchForm="ngForm" (ngSubmit)="searchJobs(searchForm.value)">
+    <input type="text"
+            ngModel
+            class="search-input"
+            name="term"
+            placeholder="Angulae, React, node..."
+            required
+    >
+    <input type="text"
+            ngModel
+            class="search-input"
+            name="place"
+    >
+    <button [disabled]="searchForm.invalid" type="submit" class="btn btn-success">chercher</button>
+
+  </form>
+</div>
